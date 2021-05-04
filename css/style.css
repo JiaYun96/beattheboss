@@ -1,0 +1,79 @@
+/* Sort by TYPE, then within use A-Z */
+
+body {
+    background-color: bisque;
+    height: 100vh;
+}
+
+div {
+    cursor: url('http://www.rw-designer.com/icon-view/7085.png'), pointer;            
+ }
+
+
+.playArea {
+    margin-top: 70px;    
+    overflow: hidden;
+}
+
+
+#headingBoss {
+    color: brown;
+}
+
+/* Top Portion of the playArea */
+h1 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Left Side of the playArea */
+img {
+    width: 85%;
+    /* margin-bottom: 10px; */
+}
+
+
+/* Right Side of the playArea */
+.rightsidetext {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+h4 {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.buttonStartBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border: 3px solid green;
+    border-radius: 5px;
+}
+
+.gamevaluesBorder {
+    border: 3px solid red;
+    height: 350px;
+    border-radius: 5px;
+}
+
+
+
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
