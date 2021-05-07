@@ -15,33 +15,32 @@
     <link href= "css/style.css" rel = "stylesheet">
 
     <!-- Title of the Webpage -->
-    <title>BEAT YOUR BOSS</title>
+    <title>BEAT THE BOSS</title>
 
 </head>
 
 
 <body>
 
-    <!-- Game Headers -->  
+    <!-- (1) Game Headers -->  
     <div class = "gameHeaders">
 
-        <!-- Title of Game -->
+        <!-- Title of Game / HARD CODE-->
         <h1>BEAT YOUR BOSS</h1>
 
-        <!-- Sub-Title -->
+        <!-- Sub-Title / CHANGES BASED ON INPUT IN SECTION 1 OF JS-->
         <h1 id = "headingBoss">Who's Your Boss?</h1>
-
     </div>
 
 
-    <!-- Game Play Area -->  
-    <div class = "playArea"></div>
+    <!-- (2) Game Play Area -->  
+    <div class = "topPlayArea"></div>
 
-        <!-- Split the Left and Right Area -->
+        <!-- Split the (A) Left and (B) Right Area -->
         <div class = "container">
             <div class = "row justify-content-start">
               
-                <!-- Left Side of the Game Play Area -->              
+                <!-- (2A) Left Side of the Game Play Area -->              
                 <div class = "col-9" id = "leftSide">
 
                     <table id = "gridArea">
@@ -90,67 +89,80 @@
                     </table>
                 </div>
 
-                <!-- Right Side of the Game Play Area -->
+                <!-- (2B) Right Side of the Game Play Area -->
                 <div class = "col-3" id ="rightSide">
+                    
+                    <!-- (2B.1) ALL THE BUTTONS 1. 2. 3. -->
 
-                    <!-- Input Boss Name -->
-                    <h4>Who did you suffer under?</h4>
-                    <div class = "input-group">
-                        <input type = "text" class = "form-control" id = "nameInputField" placeholder = "Boss's Name">
-                        <button type = "button" class = "btn btn-primary" id = "submitButton" onClick = "displayText()">Mallet Up!</button>                    
-                    </div>
-                    
-                    </br>
-                
-                    <!-- Buttons for Gameplay -->
-                    <h4>Click START to begin!</h4>
-                    <div class = "buttonStartBorder">
-                    <button id = "start-button" onclick = "startbossgame()">START</button>
-                    </div>
-                    
-                    </br>
+                        <!-- Input Boss Name -->
+                        <h4>1. WHO made you suffer?</h4>
+                            <div class = "buttonBorder">
+                                <div class = "input-group">
+                                    <input type = "text"  id = "nameInputField" placeholder = "Boss's Name">
+                                    <button type = "button" id = "submitButton">Mallet Up!</button>                    
+                                </div>
+                            </div>
+                        
+                        </br>
+
+                        <!-- Buttons for Different Game Modes -->
+                        <h4>2. Select GAME MODE!</h4>
+                            <div class = "buttonBorder">
+                                <button id = "moreTime">Normal Game</button> <!-- Choose Normal Time = 15 Seconds -->
+                                <button id = "lessTime">Quick Game</button> <!-- Change to Quick Time = 10 Seconds -->
+                            </div>
+                        
+                        </br>
+                        
+                        <!-- Button to Start -->
+                        <h4>3. Click here to BEGIN!</h4>
+                            <div class = "buttonBorder">
+                                <button id = "start-button" onclick = "startbossgame()">Start</button>
+                            </div>
+                                        
+                        </br>
+
+
+
+                    <!-- (2B.2) ALL THE GAME VALUES -->
 
                     <div class = "gamevaluesBorder">
+                        
                         <!-- Countdown Section -->
                         <div class = "rightsidetext">
                             <h3>No More OT!</h3>
-                            <span id = "time-left">20</span>
-                        </div>
-                        
-                        </br>
+                            <h3 id = "displayTime"></h3>
+                        </div>    
+                            <span id = "time-left">Choose Mode</span>
+                    </div>    
+                       
+                    </br>
+
+
+                    <div class = "gamevaluesBorder">
                         
                         <!-- Scoring Section -->
                         <div class = "rightsidetext">
                             <h3>Your Score</h3>
-                            <div id = "count"><span class="score">0</span> beatings</div>
+                            <div id = "count"><span class = "score">0</span> beatings</div>
                         </div>
-
                         </br>
 
-                        <!-- Scoring Section -->
-                        <div class = "rightsidetext">
-                            <h3>Select Level</h3>
-                                <button id = "start-button1" onclick = "startbossgame()">Lvl 1</button> <!-- Change to Level 1 // Change Speed -->
-                                <button id = "start-button2" onclick = "startbossgame()">Lvl 2</button> <!-- Change to Level 2 // Change Speed -->
-                                <button id = "start-button3" onclick = "startbossgame()">Lvl 3</button> <!-- Change to Level 3 // Change Speed -->
-                        </div>
+                    </div>
 
-                        </br>
-                        
-                        <!-- Scoring Section -->
+                        <!-- Scoring Section
                         <div class = "rightsidetext">
                             <h3>Your Best Score</h3>
                             <div id="history"><span id="scoreHistory"></span>points</div>
-                        </div>
-                    </div>
+                        </div> -->
             
-                </div>
+                </div> <!-- Close Col-3 / Right Side of gameArea-->
             </div>
 
-        </div>
-    </div>
+        </div> <!-- Close Entire Container-->
+
 
 <script src = "main.js"></script>
 
 </body>
-</html>
+</html> 

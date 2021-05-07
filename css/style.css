@@ -1,4 +1,6 @@
-/* Sort by TYPE, then within use A-Z */
+/* -----------------------------------------------------------*/
+/* OVERALL LAYOUT */
+/* -----------------------------------------------------------*/
 
 body {
     background-color: bisque;
@@ -10,17 +12,15 @@ div {
  }
 
 
-.playArea {
+.topPlayArea {
     margin-top: 70px;    
     overflow: hidden;
 }
 
-
-#headingBoss {
-    color: brown;
-}
-
+/* -----------------------------------------------------------*/
 /* Top Portion of the playArea */
+/* -----------------------------------------------------------*/
+
 h1 {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -32,14 +32,26 @@ h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* Left Side of the playArea */
-img {
-    width: 85%;
-    /* margin-bottom: 10px; */
+#headingBoss {
+    color: brown;
 }
 
 
-/* Right Side of the playArea */
+/* -----------------------------------------------------------*/
+/* Left Side of the playArea (Whack the Boss Grid)*/
+/* -----------------------------------------------------------*/
+
+img {
+    width: 85%; /*Sizing of office tables*/
+}
+
+
+/* -----------------------------------------------------------*/
+/* Right Side of the playArea (Buttons and Game Values*/
+/* -----------------------------------------------------------*/
+
+/* A. Overall Text & Border Styles */
+
 .rightsidetext {
     text-align: center;
     font-family: monospace;
@@ -53,27 +65,72 @@ h4 {
     font-size: 18px;
 }
 
-.buttonStartBorder {
+.buttonBorder {
+    background-color: rgb(207, 205, 228);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    border: 3px solid green;
+    border: 3px solid;
+    border-color:#0275d8;
     border-radius: 5px;
+    height: 50px;
 }
 
 .gamevaluesBorder {
-    border: 3px solid red;
-    height: 350px;
+    background-color: rgb(228, 205, 205);
+    border: 3px solid;
+    border-color: #d9534f;
     border-radius: 5px;
+    height: 117px;
 }
 
 
+/* B. Input Field Design (Input Boss Name) */
 
+input {
+    text-align:center;
+}
+
+#nameInputField {
+    margin-left: 5px;
+    margin-right: 5px;    
+    border-radius: 5px;
+    width: 131px;
+}
+
+
+/* C. Button Designs */
 
 button {
-    background-color: black;
-    color: white;
     border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;    
+    font-weight: bold;
 }
 
+#moreTime {
+    background-color:#5cb85c;
+}
+
+#lessTime {
+    background-color:#f0ad4e;
+}
+
+
+
+/* D. Game Value Display Design Styles */
+
+#time-left {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    margin-top: -10px;    /* To have some space before the bottom border */
+}
+
+#count {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
